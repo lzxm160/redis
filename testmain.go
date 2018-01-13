@@ -1,7 +1,7 @@
 package redis
 
 func main() {
-	client := redis.NewClient(&redis.Options{
+	client := NewClient(&Options{
 		Addr:     "r-bp19e097f1b37414.redis.rds.aliyuncs.com:6379",
 		Password: "Miner7032018", // no password set
 		DB:       0,              // use default DB
