@@ -1,5 +1,9 @@
 package redis
 
+import (
+	"fmt"
+)
+
 func main() {
 	client := NewClient(&Options{
 		Addr:     "r-bp19e097f1b37414.redis.rds.aliyuncs.com:6379",
