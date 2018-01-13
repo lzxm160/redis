@@ -25,7 +25,7 @@ func main() {
 	// }
 	// fmt.Println("key", val)
 
-	val, err := client.HGetAll("eth:{xx}"))
+	val, err := client.HGetAll("eth:{xx}")
 	if err == redis.Nil {
 		fmt.Println("eth:{xx} does not exist")
 	} else if err != nil {
