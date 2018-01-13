@@ -29,7 +29,7 @@ func main() {
 	fmt.Println("select ", sel.String())
 
 	val1 := client.HGetAll("eth:{xx}")
-	fmt.Println("eth:{xx} ", val.String())
+	fmt.Println("eth:{xx} ", val1.String())
 
 	val2 := client.HGetAll("eth:{xx}:xx")
 	fmt.Println("eth:{xx}:xx ", val2.String())
