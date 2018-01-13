@@ -13,7 +13,7 @@ func main() {
 
 	pong, err := client.Ping().Result()
 	fmt.Println(pong, err)
-	err := client.Set("key", "value", 0).Err()
+	err = client.Set("key", "value", 0).Err()
 	if err != nil {
 		panic(err)
 	}
@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("key", val)
 
 	val2, err := client.Get("key2").Result()
-	if err == redis.Nil {
+	if err == Nil {
 		fmt.Println("key2 does not exist")
 	} else if err != nil {
 		panic(err)
