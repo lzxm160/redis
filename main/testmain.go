@@ -1,8 +1,8 @@
 package main
 
 import (
-	redis "../"
 	"fmt"
+	redis "github.com/go-redis/redis"
 )
 
 func main() {
