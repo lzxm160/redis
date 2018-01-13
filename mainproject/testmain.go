@@ -24,8 +24,9 @@ func main() {
 	// 	panic(err)
 	// }
 	// fmt.Println("key", val)
-
-	val := client.HGetAll("eth:{xx}")
+	val := client.Select(2)
+	fmt.Println("select ", val.String())
+	val1 := client.HGetAll("eth:{xx}")
 	fmt.Println("eth:{xx} ", val.String())
 
 	val2 := client.HGetAll("eth:{xx}:xx")
