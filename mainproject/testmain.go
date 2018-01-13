@@ -26,9 +26,9 @@ func main() {
 	// fmt.Println("key", val)
 
 	val := client.HGetAll("eth:{xx}")
-	fmt.Println("eth:{xx} ", val.val)
+	fmt.Println("eth:{xx} ", val.String())
 
 	val2 := client.HGetAll("eth:{xx}:xx")
-	fmt.Println("eth:{xx}:xx ", val2.val)
+	fmt.Println("eth:{xx}:xx ", val2.String())
 
 }
