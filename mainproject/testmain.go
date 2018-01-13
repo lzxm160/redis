@@ -25,20 +25,10 @@ func main() {
 	// }
 	// fmt.Println("key", val)
 
-	val, err := client.HGetAll("eth:{xx}")
-	if err == redis.Nil {
-		fmt.Println("eth:{xx} does not exist")
-	} else if err != nil {
-		panic(err)
-	} else {
-		fmt.Println("eth:{xx} ", val)
-	}
-	val2, err := client.HGetAll("eth:{xx}:xx")
-	if err == redis.Nil {
-		fmt.Println("eth:{xx}:xx does not exist")
-	} else if err != nil {
-		panic(err)
-	} else {
-		fmt.Println("eth:{xx}:xx ", val2)
-	}
+	val := client.HGetAll("eth:{xx}")
+	fmt.Println("eth:{xx} ", val.val)
+
+	val2 := client.HGetAll("eth:{xx}:xx")
+	fmt.Println("eth:{xx}:xx ", val2.val)
+
 }
