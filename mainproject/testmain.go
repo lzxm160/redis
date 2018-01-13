@@ -24,8 +24,10 @@ func main() {
 	// 	panic(err)
 	// }
 	// fmt.Println("key", val)
-	val := client.Select(2)
-	fmt.Println("select ", val.String())
+	pipe := client.Pipeline()
+	sel := pipe.Select(2)
+	fmt.Println("select ", sel.String())
+
 	val1 := client.HGetAll("eth:{xx}")
 	fmt.Println("eth:{xx} ", val.String())
 
