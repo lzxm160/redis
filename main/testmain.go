@@ -1,11 +1,12 @@
-package redis
+package main
 
 import (
+	redis "../"
 	"fmt"
 )
 
 func main() {
-	client := NewClient(&Options{
+	client := redis.NewClient(&redis.Options{
 		Addr:     "r-bp19e097f1b37414.redis.rds.aliyuncs.com:6379",
 		Password: "Miner7032018", // no password set
 		DB:       0,              // use default DB
@@ -25,7 +26,7 @@ func main() {
 	fmt.Println("key", val)
 
 	val2, err := client.Get("key2").Result()
-	if err == Nil {
+	if err == redis.Nil {
 		fmt.Println("key2 does not exist")
 	} else if err != nil {
 		panic(err)
