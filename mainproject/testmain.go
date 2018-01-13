@@ -33,5 +33,8 @@ func main() {
 
 	val2 := pipe.HGetAll("eth:{xx}:xx")
 	fmt.Println("eth:{xx}:xx ", val2.String())
-
+	_, err = pipe.Exec()
+	fmt.Println("eth:{xx} ", val1.String())
+	fmt.Println("eth:{xx}:xx ", val2.String())
+	fmt.Println(err)
 }
