@@ -30,19 +30,19 @@ func ExampleClient_Watch(client *redis.Client) {
 		return err
 	}
 
-	var wg sync.WaitGroup
-	for i := 0; i < 100; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
+	// var wg sync.WaitGroup
+	// for i := 0; i < 100; i++ {
+	// // 	wg.Add(1)
+	// 	go func() {
+	// 		defer wg.Done()
 
-			err := incr("counter3")
-			if err != nil {
-				panic(err)
-			}
-		}()
+	err := incr("counter3")
+	if err != nil {
+		panic(err)
 	}
-	wg.Wait()
+	// 	}()
+	// }
+	// wg.Wait()
 
 	n, err := client.Get("counter3").Int64()
 	fmt.Println(n, err)
