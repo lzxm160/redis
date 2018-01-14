@@ -4,7 +4,7 @@ import (
 	"fmt"
 	redis "github.com/go-redis/redis"
 	"strconv"
-	"sync"
+	// "sync"
 )
 
 func ExampleClient_Watch(client *redis.Client) {
