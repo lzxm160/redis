@@ -50,11 +50,11 @@ func ExampleClient_Watch(client *redis.Client) {
 }
 func main() {
 	client := redis.NewClient(&redis.Options{
-		// Addr:     "r-bp19e097f1b37414.redis.rds.aliyuncs.com:6379",
-		// Password: "Miner7032018", // no password set
-		Addr:     "127.0.0.1:6379",
-		Password: "etcpool123",
-		DB:       0, // use default DB
+		Addr:     "r-bp19e097f1b37414.redis.rds.aliyuncs.com:6379",
+		Password: "Miner7032018", // no password set
+		// Addr:     "127.0.0.1:6379",
+		// Password: "etcpool123",
+		DB: 2, // use default DB
 	})
 
 	pong, err := client.Ping().Result()
